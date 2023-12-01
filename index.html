@@ -1,17 +1,141 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Título de prueba de la página</title>
-        <meta charset="utf-8">
-        <meta name="description" content="Descripción de la página">
-        <meta name="keywords" content="palabras, clave, de, la, página">
-        <meta name="author" content="Autor de la página">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/estilosIndex.css">
-        <script src="js/scriptIndex.js"></script>
-    </head>
-    <body>
-        <h1>Título h1 de prueba</h1>
-        <p>Párrafo de prueba</p>
-    </body>
+
+<head>
+    <title>Título de prueba de la página</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Descripción de la página">
+    <meta name="keywords" content="palabras, clave, de, la, página">
+    <meta name="author" content="Autor de la página">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/estiloIndex.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/scriptIndex.js"></script>
+</head>
+
+<body style="background-color: #85f79b;">
+    <!-- <div id="contenedorLogin" class="container"> -->
+    <div id="contenedorLogin" class="container" style="display: none;">
+        <div class="container"
+            style="width: 500px; height: 300px; margin-top: 100px; margin-bottom: 100px; background-color: #85f79b; border-radius: 10px; padding: 20px;">
+            <h2 class="form-signin-heading text-center">Iniciar sesión</h2>
+            <label for="userLog" class="sr-only">Usuario</label>
+            <input type="text" id="userLog" name="userLog" class="form-control" placeholder="Usuario" required
+                autofocus>
+
+            <label for="passwordLog" class="sr-only">Contraseña</label>
+            <input type="password" id="passwordLog" name="passwordLog" class="form-control" placeholder="Contraseña"
+                required>
+
+            <input type="button" onclick="login()" name="login" id="login" value="Entrar"
+                class="btn btn-lg btn-primary btn-block" style="margin-top: 30px;">
+            <!-- Mensaje de aviso con bootstrap -->
+            <div class="alert alert-danger" id="alerta" style="display: none;">
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- <div id="contenedorPrincipal" class="container" style="display: none;"> -->
+    <div id="contenedorPrincipal" class="container">
+
+        <div class="container col-md-12" id="container" style="width: 100%; height: 100%;">
+            <div class="panel-group" id="accordionMain">
+                <!-- Acordeón 1-->
+                <div class="panel panel-success" style="background-color: #85f79b;">
+                    <div class="panel-heading" id="panel-headingMain" style="display: none;">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordionMain" href="#collapseMain"
+                                onclick="changeDisplay('panel-headingMain')">Acordeón Mensaje</a>
+                        </h4>
+                    </div>
+                    <div id="collapseMain" class="panel-collapse collapse in">
+
+
+                        <div class="container" style="background-color: #85f79b;  max-height: 100hv;">
+                            <div class="row">
+                                <!-- Añadir una foto a la izquierda de los mensajes -->
+                                <div class="col-sm-12 col-md-5">
+                                    <!-- img centrada -->
+                                    <img src="img/img1.jpg" alt="Feliz cumpleaños" class="img-responsive"
+                                        style="width: 100hv; max-height: 85vh; border-radius: 10px; margin:auto;">
+                                </div>
+                                <div class="col-sm-12 col-md-7">
+                                    <h1>¡Feliz cumpleaños mi niña hermosa!</h2>
+                                        <h4 style="text-align: justify;">
+                                            ¡Te deseo lo mejor! ¡Te quiero mucho, muchísimo! Realmente quiero decirte
+                                            con este pequeño obsequio que eres una niña maravillosa, desde el momento
+                                            que te conocí siempre brillaste entre tantas personas a tu
+                                            alrededor.<br><br>
+                                            Siempre tan bella, tan alegre y tan pura, realmente si me dijeran que puedo
+                                            volver al momento en que te vi en peligro e intenté protegerte de la
+                                            situación que vivías, sabiendo todo lo que ello implicó, lo volvería a hacer
+                                            100 veces, o mil millón de veces, porque realmente perdería la oportunidad
+                                            de conocer una de las personas más importante que me trajo mi venida a este
+                                            país.<br><br>
+                                            Conocerte, convivir contigo y todo lo que ello significó, y el recuerdo de
+                                            mis momentos contigo es lo más importante que tengo. Realmente esto debería
+                                            ser un regalo para ti, pero tenerte en mi vida, siempre fue el mejor regalo
+                                            que pude pedir.<br><br> <strong>¡¡TE QUIERO UN MONTÓN!!</strong>
+                                        </h4>
+                                        <h4>Y... ¡QUE VIVA LA CUMPLEAÑERA!</h4>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- Acordeón  2-->
+                <div class="panel panel-warning" style="background-color: #85f79b;">
+                    <div class="panel-heading" id="panel-headingGift">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordionMain" href="#collapseGift"
+                                onclick="changeDisplay('panel-headingGift')">Acordeón Regalo</a>
+                        </h4>
+                    </div>
+                    <div id="collapseGift" class="panel-collapse collapse">
+                        <div id="contenido-externo"></div>
+
+                        <script>
+                            fetch('contentBook/index.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('contenido-externo').innerHTML = data;
+                                });
+
+                        </script>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div class="container" style="width: 500px; height: 300px; margin-top: 100px; margin-bottom: 100px; background-color: #85f79b; border-radius: 10px; padding: 20px;"> -->
+        <!-- <h1>TEST</h1> -->
+
+        <!-- botón para redirigir a usando una función -->
+        <!-- <input type="button" onclick="goBook()" name="goBook" id="goBook" value="Abrir Libro" class="btn btn-lg btn-primary btn-block" style="margin-top: 30px;"> -->
+
+        <!-- Crear botón con función logout  con un botón de cancelar, rojo-->
+        <!-- <input type="button" onclick="logout()" name="logout" id="logout" value="Cerrar Sesión" class="btn btn-lg btn-primary btn-block" style="margin-top: 30px;"> -->
+        <!-- </div> -->
+    </div>
+
+
+
+
+</body>
+
 </html>
