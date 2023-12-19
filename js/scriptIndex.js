@@ -153,12 +153,12 @@ function giftEm(pageGiftNum) {
         // imgGift.attr("src", "img/imgGift12.jpg");
         txtGift.html("Ya que nuestro tiempo juntos ha terminado, y ya es momento que yo deje de vivir de recuerdos.");
     }
-    else if (pageGiftNum == 14) {
+    else if (pageGiftNum == 15) {
         var contenedorMedia = $("#contenedorMedia");
         contenedorMedia.html('<img id="imgGiftEm" src="img/imgGift13.jpg" alt="Imagen" style="max-width: 80%; max-height: 80vh; border-radius: 10px;">');
         txtGift.html("Realmente no me arrepiento de haberme enamorado de ti, y te deseo lo mejor, en serio.");
     }
-    else if (pageGiftNum == 15) {
+    else if (pageGiftNum == 16) {
         var contenedorMedia = $("#contenedorMedia");
         contenedorMedia.html('<video id="vidGiftEm" controls style="max-width: 80%; max-height: 80vh; border-radius: 10px;"><source src="img/vidGift1.mp4" type="video/mp4"></video>');
         txtGift.html("Y este día, aunque fue el último que fuimos verdaderamente cercanos, fue uno de los mejores, Te amo <3");
@@ -172,10 +172,10 @@ function changeGift(direccion) {
         if (pageGiftNum > 1) {
             pageGiftNum = pageGiftNum - 1;
         } else {
-            pageGiftNum = 15;
+            pageGiftNum = 16;
         }
     } else if (direccion == "next") {
-        if (pageGiftNum < 15) {
+        if (pageGiftNum < 16) {
             pageGiftNum = pageGiftNum + 1;
         } else {
             pageGiftNum = 1;
