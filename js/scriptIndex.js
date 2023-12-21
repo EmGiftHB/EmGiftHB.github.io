@@ -1,20 +1,20 @@
 
 // Código de prueba para verificar que el script se cargó correctamente
-// $(document).ready(function () {
-//     if (Cookies.get("login")) {
-//         console.log("El usuario está logueado");
-//         var divLogin = $("#contenedorLogin");
-//         var divPrincipal = $("#contenedorPrincipal");
-//         divLogin.hide();
-//         divPrincipal.show();
-//     } else {
-//         console.log("El usuario no está logueado");
-//         var divLogin = $("#contenedorLogin");
-//         var divPrincipal = $("#contenedorPrincipal");
-//         divLogin.show();
-//         divPrincipal.hide();
-//     }
-// });
+$(document).ready(function () {
+    if (Cookies.get("login")) {
+        console.log("El usuario está logueado");
+        var divLogin = $("#contenedorLogin");
+        var divPrincipal = $("#contenedorPrincipal");
+        divLogin.hide();
+        divPrincipal.show();
+    } else {
+        console.log("El usuario no está logueado");
+        var divLogin = $("#contenedorLogin");
+        var divPrincipal = $("#contenedorPrincipal");
+        divLogin.show();
+        divPrincipal.hide();
+    }
+});
 
 
 // Función para mostrar un mensaje de error
